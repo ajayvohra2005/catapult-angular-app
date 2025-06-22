@@ -1,0 +1,19 @@
+<main class="main">
+  <div class="content">
+  @if (isAuthenticated) {
+    <div>
+    User Data:
+    <br />
+    <pre>{{ userData$ | async | json }}</pre>
+    <br />
+    <button (click)="logout()"> {{ title }} Logout</button>
+    </div>
+  } @else {
+    <div>
+      <button (click)="login()"> {{ title }} Login</button>
+    </div>
+  }
+  </div>
+</main>
+
+<router-outlet />
