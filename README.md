@@ -22,7 +22,7 @@ The template [angular-dev-machine.yaml](cfn/angular-dev-machine.yaml) creates [A
 ### Connect to Developer Machine using SSH
 
 * Once the stack status in CloudFormation console is `CREATE_COMPLETE`, find the Angular Developer Machine instance launched in your stack in the Amazon EC2 console, and [connect to the instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) as user `ubuntu`, using your SSH key pair.
-* When you connect using SSH, and you see the message `"Cloud init in progress! Logs: /var/log/cloud-init-output.log"`, disconnect and try later after about 15 minutes. 
+* When you connect using SSH, and you see the message `"Cloud init in progress! Logs: /var/log/cloud-init-output.log. Machine will REBOOT after cloud init is complete!!"`, disconnect and try later after about 15 minutes. 
 * If you see the message `Angular Developer Machine is ready!`, run the command `sudo passwd ubuntu` to set a new password for user `ubuntu`. Now you are ready to connect to the developer machine using the [Amazon DCV client](https://docs.aws.amazon.com/dcv/latest/userguide/client.html)
 
 ### Connect to Machine using Amazon DCV Client
